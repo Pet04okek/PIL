@@ -1,0 +1,21 @@
+from PIL import Image, ImageDraw, ImageFont
+
+pixels = [[0, 0, 1, 1, 1, 1, 0, 0],
+          [0, 0, 1, 0, 0, 1, 0, 0,],
+          [0, 0, 1, 0, 0, 1, 0, 0,],
+          [0, 0, 1, 0, 0, 1, 0, 0,],
+          [0, 0, 1, 0, 0, 1, 0, 0,],
+          [0, 0, 1, 0, 0, 1, 0, 0,]]
+
+image = Image.new("RGB", (len(pixels[0]), len(pixels)), "white")
+draw = ImageDraw.Draw(image)
+
+pixel_size = 1
+
+for y, row in enumerate(pixels):
+    for x, pixel in enumerate(row):
+        top_left = (x * pixel_size, y * pixel_size)
+        bottom_right = ((x + 1) * pixel_size, (y + 1) * pixel_size)
+        color = "black" if pixel == 1 else "white"
+        draw.rectangle((top_left, bottom_right), fill=color)
+image.show()
