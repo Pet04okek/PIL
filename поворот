@@ -1,0 +1,8 @@
+# Поворот
+
+from PIL import Image
+
+image = Image.open("S:\\Кружок\\Python\\images for PIL\\figures.png")
+normal = image.rotate(180)
+normal.show()
+normal.save("S:\\Кружок\\Python\\images for PIL\\получилось\\screen_camera_good.png")
