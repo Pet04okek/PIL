@@ -1,0 +1,7 @@
+from PIL import Image, ImageDraw, ImageFont
+
+image = Image.new("RGB", (300, 300), "blue")
+draw = ImageDraw.Draw(image)
+font = ImageFont.truetype("C:\\WINDOWS\\FONTS\\FORTE.TTF", 25)
+draw.text((50, 75), "Hi brat, no, brother!))", fill="white", font=font)
+image.show()
