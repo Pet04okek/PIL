@@ -1,0 +1,7 @@
+from PIL import Image, ImageDraw, ImageFont
+
+image = Image.open("S:\\Кружок\\Python\\images for PIL\\pixels.png")
+re_image = ImageDraw.Draw(image)
+re_image.rectangle((177, 35, 221, 80), outline="blue")
+re_image.rectangle((20, 140, 52, 230), fill="blue")
+image.show()
