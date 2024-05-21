@@ -1,0 +1,8 @@
+# Вырезание
+
+from PIL import Image
+
+image = Image.open("S:\\Кружок\\Python\\images for PIL\\figures.png")
+coped = image.crop((790, 490, 1300, 750))
+coped.show()
+coped.save("S:\\Кружок\\Python\\images for PIL\\получилось\\petr.png")
